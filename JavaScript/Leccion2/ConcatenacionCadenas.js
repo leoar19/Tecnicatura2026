@@ -13,3 +13,10 @@ console.log(juntos);
 
 nombre += apellido;
 console.log(nombre);
+
+// Hoy ya no se usa var, se usa let y const.
+let nombre2 = "Pedro";
+console.log(nombre2);
+
+const apellido2 = "Lepes"; // Una constante no se puede modificar.
+console.log(apellido2);
