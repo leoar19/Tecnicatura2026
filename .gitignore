@@ -19,3 +19,13 @@ node_modules/
 
 # Logs
 *.log
+/java/Ejercicio_2/nbproject/private/
+/java/Ejercicio_3/nbproject/private/
+/java/Ejercicio_4/nbproject/private/
+/java/Ejercicio_2/build/
+/java/Ejercicio_5/nbproject/private/
+/java/Ejercicio_6/nbproject/private/
+/java/Ejercicio_7/nbproject/private/
+/java/Ejercicio_5/build/
+/java/Ejercicio_6/build/
+/java/Ejercicio_7/build/
