@@ -13,5 +13,6 @@ public class Ejercicio5 {
         System.out.println("El precio a pagar será: " + precioFinal);
         // Alternativa sin variable descuento:
         // var precioFinal = compra > 100 ? compra * 0.8 : compra;
+        entrada.close();
     }    
 }

@@ -27,5 +27,6 @@ public class Ejercicio3_Switch {
             System.out.println("Fuera de rango");
             break;
     }
+    entrada.close();
     }
 }

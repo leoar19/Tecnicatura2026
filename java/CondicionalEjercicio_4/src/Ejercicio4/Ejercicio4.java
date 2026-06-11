@@ -23,6 +23,7 @@ public class Ejercicio4 {
         }
         else {
             System.out.println("Alguna de las calificaciones es invalida");
-        }   
+        }
+        entrada.close();
     }
 }

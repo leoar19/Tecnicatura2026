@@ -20,5 +20,6 @@ public class Ejercicio6 {
             resultado = numA + numB;
         }
         System.out.println("resultado = " + resultado);
+        entrada.close();
     }
 }

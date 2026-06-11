@@ -22,5 +22,6 @@ public class Ejercicio1 {
         }
         
         System.out.println("estacion = " + estacion);
+        entrada.close();
     }
 }

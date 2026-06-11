@@ -25,5 +25,6 @@ public class Ejercicio3 {
         else {
             System.out.println("Fuera de rango");
         }
+        entrada.close();
     }
 }
