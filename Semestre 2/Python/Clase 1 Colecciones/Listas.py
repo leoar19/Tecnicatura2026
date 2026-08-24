@@ -31,6 +31,11 @@ print(len(nombres)) # len es una funcion, le pasamos como parametro la lista
 
 # Agregamos un elemento al final
 nombres.append('Marcelo')
+nombres.append([1, 2, 3]) # Puede haber una lista dentro de una lista
+nombres.append(True) # Puede haber distintos tipos de datos
+nombres.append(10.45)
+nombres.append([4, 5])
+nombres.append(7)
 print(nombres)
 
 # Insertar un elemento en un indice especifico
