@@ -1,0 +1,384 @@
+/* Asi son como se hacen los comentarios en CSS*/
+/*
+comentarios multiples lineas
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a1f3b;
+    color: #e8edf3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+/* Estilo de los enlaces de la barra de navegacion */
+a {
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    color: #7ab7ef; /* Establece el color del texto de los enlaces a negro */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a8d0ff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #1e3a5f;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.navigation{
+    display: flex; /* Utiliza flexbox para organizar los elementos hijos (items de navegacion) en una fila
+     flexible */
+    gap: 1.5rem; /* Establece un espacio de 3 rem entre cada elemento hijo dentro del contenedor flex */
+    list-style: none; /* Elimina los puntos de lista predeterminados de los elementos de la lista */
+    flex-wrap: wrap;
+}
+
+/* Enlaces de la barra de navegacion configurados como si fueran botones */
+.navigation li {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.navigation li:hover {
+    background: #1e4a7a;
+}
+
+.navigation li a {
+    color: #e0e8f0;
+    font-weight: 500;
+}
+
+.navigation li a:hover {
+    color: #fff;
+}
+
+section {
+    margin: 2rem auto;
+    max-width: 900px;
+}
+
+/* Contenedores comunes (todos los .container-*) */
+[class^="container-"] {
+    background: rgba(10, 31, 59, 0.85); /* Fondo oscuro semitransparente */
+    border: 1px solid #1e4a7a;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    color: #d0dce8;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+[class^="container-"] h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 3px solid #3a7bb5;
+    padding-bottom: 0.5rem;
+}
+
+[class^="container-"] h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    color: #b8d4f0;
+}
+
+[class^="container-"] h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #a0c0e0;
+    margin: 0.5rem 0;
+}
+
+.sobremi {
+    display: flex;
+    justify-content: center;
+}
+
+.container-sobremi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    align-items: center;
+    text-align: center;
+}
+
+.container-experiencia a, .container-estudios a {
+    display: inline-block;
+    background: #1e4a7a;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.container-experiencia a:hover,
+.container-estudios a:hover {
+    background: #2e6a9a;
+}
+
+.img-perfil {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 4px solid #3a7bb5;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Media Queries agrupadas */
+
+/* Celular (Pantallas pequeñas, hasta 767px) */
+@media (max-width: 767px) {
+    body {
+        padding: 0 0.5rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0.5rem;
+        gap: 0.8rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .navigation li {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 1.5rem;
+    }
+
+    section {
+        margin: 1.5rem auto;
+        max-width: 100%;
+    }
+
+    [class^="container-"] {
+        padding: 1.5rem 1rem;
+        margin: 1.2rem 0;
+        border-radius: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    [class^="container-"] h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    [class^="container-"] h3 {
+        font-size: 1.2rem;
+        margin-top: 1.2rem;
+    }
+
+    [class^="container-"] h4 {
+        font-size: 1rem;
+    }
+
+    .container-sobremi {
+        max-width: 100%;
+        padding: 1.5rem 1rem;
+    }
+
+    .img-perfil {
+        width: 180px;
+        height: 180px;
+        border-width: 3px;
+    }
+
+    .container-sobremi p {
+        font-size: 0.95rem;
+    }
+
+    .container-experiencia a,
+    .container-estudios a {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-top: 0.3rem;
+    }
+
+    /* Mejora el espaciado en la sección de experiencia */
+    .container-experiencia h3 {
+        margin-top: 1rem;
+    }
+
+    .container-experiencia h4 {
+        font-size: 0.95rem;
+    }
+
+    /* Ajuste para el header y el nav en móvil */
+    header {
+        border-bottom: 2px solid #1e3a5f;
+        padding-bottom: 0.8rem;
+    }
+}
+
+/* Tableta (Pantallas medianas, entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        padding: 0 1.5rem;
+    }
+
+    .header {
+        padding: 1.5rem 1.5rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .navigation {
+        gap: 1.2rem;
+    }
+
+    .navigation li {
+        font-size: 0.95rem;
+        padding: 0.4rem 1rem;
+    }
+
+    section {
+        max-width: 95%;
+    }
+
+    [class^="container-"] {
+        padding: 2rem 1.8rem;
+        font-size: 1rem;
+        border-radius: 1.2rem;
+        margin: 1.8rem 0;
+    }
+
+    [class^="container-"] h2 {
+        font-size: 1.8rem;
+    }
+
+    [class^="container-"] h3 {
+        font-size: 1.3rem;
+    }
+
+    .container-sobremi {
+        max-width: 90%;
+        padding: 2rem 1.5rem;
+    }
+
+    .img-perfil {
+        width: 220px;
+        height: 220px;
+        border-width: 4px;
+    }
+
+    .container-sobremi p {
+        font-size: 1rem;
+    }
+
+    .container-experiencia a,
+    .container-estudios a {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    /* Ajuste adicional para que el header se vea mejor en tablet */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1025px) {
+    /* Apenas retoques para pantallas grandes */
+    body {
+        padding: 0 2rem;
+    }
+
+    header {
+        padding: 1.5rem 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto 2rem auto;
+    }
+
+    .navigation {
+        gap: 2rem;
+    }
+
+    .navigation li {
+        font-size: 1.05rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+    section {
+        max-width: 1100px;
+        margin: 2.5rem auto;
+    }
+
+    [class^="container-"] {
+        padding: 2.5rem 3rem;
+        font-size: 1.1rem;
+        max-width: 1000px;
+        margin: 2rem auto;
+        border-radius: 1.8rem;
+    }
+
+    [class^="container-"] h2 {
+        font-size: 2.2rem;
+    }
+
+    [class^="container-"] h3 {
+        font-size: 1.5rem;
+    }
+
+    .container-sobremi {
+        max-width: 900px;
+    }
+
+    .img-perfil {
+        width: 280px;
+        height: 280px;
+    }
+
+    .container-sobremi p {
+        font-size: 1.1rem;
+        max-width: 80%;
+    }
+}

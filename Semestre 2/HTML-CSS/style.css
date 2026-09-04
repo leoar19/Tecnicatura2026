@@ -2,12 +2,38 @@
 /*
 comentarios multiples lineas
 */
+
+/* Definiendo variables de color en css*/
+:root {
+    --body-bg-color: rgb(43,43,70);
+    --text-color: white;
+    --colorh1-color: rgb(215, 211, 211);
+}
+/* Aplicando variable creada en el root al body de nuestra web */
+/* Reemplazo el body con el uso de variables css*/
 body {
-    background: rgb(43,70,70);
-    color: white;
+    background: var(--body-bg-color);
+    color: var(--text-color);
     font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* body {
+    background: rgb(43,70,70);
+    color: white;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+h1, h2 {
+    color: var(--colorh1-color);
+}
+
+/* Titulo del header */
+.titulo {
+    display: flex;
+    margin: 3rem;
+}
+
+/* Barra de navegacion */
 .navigation{
     display: flex; /* Utiliza flexbox para organizar los elementos hijos (items de navegacion) en una fila
      flexible */
@@ -32,7 +58,7 @@ body {
 /* Estilo de los enlaces de la barra de navegacion */
 a{
     text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
-    color: black; /* Establece el color del texto de los enlaces a negro */
+    color: rgb(215, 211, 211); /* Establece el color del texto de los enlaces a negro */
 }
 
 .sobremi {
@@ -47,6 +73,28 @@ a{
     line-height: 2.5rem; /* Espaciado entre los parrafos del texto */
     font-size: large; /* Tamaño de la fuente */
     color: azure;
+    gap: 5rem;
+    align-items: center;
+}
+
+.img-perfil {
+    border-radius: 50%;
+}
+
+.experiencia, .estudios {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    color: azure;
+}
+
+.container-experiencia, .container-estudios {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 5rem;
+    line-height: 2.5rem;
+    font-size: large;
+    margin: 8rem;
 }
 
 /* Media Queries agrupadas */
@@ -67,5 +115,46 @@ a{
         margin-top: 1rem; /* Margen a lo alto */
         line-height: 2.5rem; /* Espaciado entre los parrafos del texto */
         font-size: small; /* Tamaño de la fuente */
+        flex-direction: column;
+    }
+    /* Agregando el responsivo de las secciones experiencia y estudios */
+    .container-experiencia, .container-estudios {
+        width: 100%;
+        margin: 0rem;
+    }
+    .experiencia, .estudios {
+        width: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        font-size: small;
+    }
+}
+
+/* Tableta (Pantallas medianas, entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .titulo {
+        justify-content: center;
+    }
+    .navigation {
+        gap: 2rem;
+        justify-content: center;
+    }
+    .experiencia, .estudios {
+        width: 75%;
+    }
+}
+
+/* Escritorio (Pantallas anchas, 1024px y superiores) */
+@media (min-width: 1024px) {
+    .titulo {
+        justify-content: flex-start;
+    }
+    .navigation {
+        gap: 3rem;
+        justify-content: flex-end;
+        margin: 0 3rem;
+    }
+    .experiencia, .estudios {
+        width: 75%;
     }
 }
