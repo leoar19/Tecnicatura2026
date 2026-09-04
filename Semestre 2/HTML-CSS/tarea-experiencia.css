@@ -1,0 +1,19 @@
+/*
+En esta seccion los enlaces <a> se comportan como botones.
+Usamos display:inline-block para que se puedan aplicar padding y márgenes, pero sin romper el flujo
+del texto.
+*/
+.container-experiencia a {
+    display: inline-block;
+    background: #1e4a7a;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem; /* Boton redondeado */
+    font-weight: 500;
+    margin-top: 0.5rem; /* Separa el boton del texto anterior */
+    transition: background 0.3s, transform 0.2s;
+}
+
+.container-experiencia a:hover {
+    background: #2e6a9a; /* Oscurece ligeramente al pasar el raton */
+}

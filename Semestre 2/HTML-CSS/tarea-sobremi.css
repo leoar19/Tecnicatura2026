@@ -1,0 +1,37 @@
+/*
+.sobremi es el contenedor padre de la seccion.
+Con flex y justify-content: center logramos que el articulo hijo (container-sobremi) quede centrado
+horizontalmente.
+*/
+.sobremi {
+    display: flex;
+    justify-content: center;
+}
+
+/*
+Este contenedor tiene una disposicion en columna (flex-direction: column) para que los elementos
+(imagen, titulo, parrafos) se apilen verticalmente. Tambien centra todo su contenido con align-items y
+text-align, ambos en center.
+*/
+.container-sobremi {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px; /* Limita, para que no se vea demasiado ancho */
+    align-items: center;
+    text-align: center;
+    /* Hereda el fondo, borde, padding, etc. del selector [class^="container-"] */
+}
+
+/*
+La hacemos circular (border-radius:50%) y de tamaño fijo.
+*/
+.img-perfil {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Asegura que la imagen no se deforme al recortarse */
+    border: 4px solid #3a7bb5;
+    margin-bottom: 1.5rem; /* Separacion con el texto inferior */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}

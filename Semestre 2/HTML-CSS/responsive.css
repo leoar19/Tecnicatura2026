@@ -1,173 +1,20 @@
-/* Asi son como se hacen los comentarios en CSS*/
-/*
-comentarios multiples lineas
-*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #0a1f3b;
-    color: #e8edf3;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    padding: 0 1rem;
-}
-
-h1, h2, h3, h4 {
-    color: #fff;
-}
-
-/* Estilo de los enlaces de la barra de navegacion */
-a {
-    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
-    color: #7ab7ef; /* Establece el color del texto de los enlaces a negro */
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #a8d0ff;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    flex-wrap: wrap;
-    border-bottom: 2px solid #1e3a5f;
-}
-
-header h1 {
-    font-size: 2rem;
-    letter-spacing: 1px;
-    color: #fff;
-}
-
-.navigation{
-    display: flex; /* Utiliza flexbox para organizar los elementos hijos (items de navegacion) en una fila
-     flexible */
-    gap: 1.5rem; /* Establece un espacio de 3 rem entre cada elemento hijo dentro del contenedor flex */
-    list-style: none; /* Elimina los puntos de lista predeterminados de los elementos de la lista */
-    flex-wrap: wrap;
-}
-
-/* Enlaces de la barra de navegacion configurados como si fueran botones */
-.navigation li {
-    font-size: 1rem;
-    padding: 0.5rem 1.2rem;
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.2s;
-}
-
-.navigation li:hover {
-    background: #1e4a7a;
-}
-
-.navigation li a {
-    color: #e0e8f0;
-    font-weight: 500;
-}
-
-.navigation li a:hover {
-    color: #fff;
-}
-
-section {
-    margin: 2rem auto;
-    max-width: 900px;
-}
-
-/* Contenedores comunes (todos los .container-*) */
-[class^="container-"] {
-    background: rgba(10, 31, 59, 0.85); /* Fondo oscuro semitransparente */
-    border: 1px solid #1e4a7a;
-    border-radius: 1.5rem;
-    padding: 2.5rem;
-    margin: 2rem 0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-    color: #d0dce8;
-    line-height: 1.8;
-    font-size: 1.05rem;
-}
-
-[class^="container-"] h2 {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    border-bottom: 3px solid #3a7bb5;
-    padding-bottom: 0.5rem;
-}
-
-[class^="container-"] h3 {
-    font-size: 1.4rem;
-    margin-top: 1.5rem;
-    color: #b8d4f0;
-}
-
-[class^="container-"] h4 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #a0c0e0;
-    margin: 0.5rem 0;
-}
-
-.sobremi {
-    display: flex;
-    justify-content: center;
-}
-
-.container-sobremi {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 800px;
-    align-items: center;
-    text-align: center;
-}
-
-.container-experiencia a, .container-estudios a {
-    display: inline-block;
-    background: #1e4a7a;
-    color: #fff;
-    padding: 0.5rem 1.2rem;
-    border-radius: 2rem;
-    font-weight: 500;
-    margin-top: 0.5rem;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.container-experiencia a:hover,
-.container-estudios a:hover {
-    background: #2e6a9a;
-}
-
-.img-perfil {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border: 4px solid #3a7bb5;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-}
-
 /* Media Queries agrupadas */
-
+/*
+Todas las reglas dentro de cada media query modifican o anulan los estilos definidos en los archivos
+anteriores, adaptando el diseño a diferentes anchos de pantalla.
+*/
 /* Celular (Pantallas pequeñas, hasta 767px) */
 @media (max-width: 767px) {
     body {
-        padding: 0 0.5rem;
+        padding: 0 0.5rem; /* Reducimos margenes y padding general */
     }
 
+    /* Header en columna en vez de fila, mejor para pantallas estrechas */
     .header {
         flex-direction: column;
         align-items: center;
         padding: 1rem 0.5rem;
-        gap: 0.8rem;
+        gap: 0.8rem; /* Espacio entre titulo y menu */
     }
 
     header h1 {
@@ -175,6 +22,7 @@ section {
         text-align: center;
     }
 
+    /* Menu centrado, con menos espacio entre botones y mas pequeños */
     .navigation {
         justify-content: center;
         gap: 0.6rem;
@@ -186,6 +34,7 @@ section {
         border-radius: 1.5rem;
     }
 
+    /* Secciones y contenedores ocupan todo el ancho disponible */
     section {
         margin: 1.5rem auto;
         max-width: 100%;
@@ -199,6 +48,7 @@ section {
         line-height: 1.6;
     }
 
+    /* Encabezados mas pequeños en movil */
     [class^="container-"] h2 {
         font-size: 1.6rem;
         margin-bottom: 0.8rem;
@@ -218,6 +68,7 @@ section {
         padding: 1.5rem 1rem;
     }
 
+    /* Imagen de perfil mas pequeña */
     .img-perfil {
         width: 180px;
         height: 180px;
@@ -228,8 +79,7 @@ section {
         font-size: 0.95rem;
     }
 
-    .container-experiencia a,
-    .container-estudios a {
+    .container-experiencia a, .container-estudios a {
         padding: 0.4rem 1rem;
         font-size: 0.9rem;
         display: inline-block;
@@ -334,7 +184,7 @@ section {
 
     header {
         padding: 1.5rem 2.5rem;
-        max-width: 1200px;
+        max-width: 1200px; /* Centramos el header en pantallas muy anchas */
         margin: 0 auto 2rem auto;
     }
 

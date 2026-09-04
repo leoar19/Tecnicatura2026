@@ -1,0 +1,132 @@
+/* Asi son como se hacen los comentarios en CSS*/
+/*
+comentarios multiples lineas
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+El selector universal (*) elimina los margenes y rellenos por defecto que los navegadores aplican a
+ciertos elementos (como <body> o <ul>).
+'box-sizing: border-box' hace que el ancho/alto de un elemento incluya el padding y el borde, facilitando
+el diseño de cajas.
+*/
+
+body {
+    background: #0a1f3b; /* Fondo azul muy oscuro */
+    color: #e8edf3; /* Texto gris claro para buen contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografia sans-serif legible */
+    line-height: 1.6; /* Espaciado entre lineas (mejora lectura) */
+    padding: 0 1rem; /* Margenes laterales para que el contenido no toque el borde*/
+}
+
+/* Los encabezados siempre en blanco para que resalten sobre el fondo oscuro */
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+/* Estilo de los enlaces de la barra de navegacion */
+a {
+    text-decoration: none; /* Quita el subrayado por defecto */
+    color: #7ab7ef; /* Azul claro combina con la paleta de colores */
+    transition: color 0.3s ease; /* Suaviza el cambio de color al hacer hover */
+}
+
+a:hover {
+    color: #a8d0ff; /* Un tono mas claro al pasar el raton */
+}
+/*
+Nota: La 'transition' se aplica a 'color' pero como es la unica propiedad que cambia en el hover,
+funciona bien. 
+*/
+
+.header {
+    display: flex; /* Convierte al header en un contenedor flexible */
+    justify-content: space-between; /* Separa el titulo (izquierda) del menu (derecha) */
+    align-items: center; /* Centra verticalmente ambos elementos */
+    padding: 1.5rem 2rem; /* Espaciado interno */
+    flex-wrap: wrap; /* Permite que los elementos bajen de linea en pantallas pequeñas */
+    border-bottom: 2px solid #1e3a5f; /* Linea sutil que separa el header del contenido */
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px; /* Espaciado entre letras */
+    color: #fff;
+}
+
+.navigation{
+    display: flex; /* Los <li> se colocan en fila */
+    gap: 1.5rem; /* Espacio entre cada elemento de la lista */
+    list-style: none; /* Elimina los puntos de lista predeterminados */
+    flex-wrap: wrap; /* Si no caben, bajan a la siguiente linea */
+}
+
+/* Enlaces de la barra de navegacion configurados como si fueran botones */
+.navigation li {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem; /* Bordes redondeados */
+    background: rgba(255, 255, 255, 0.08); /* Fondo casi transparente */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Sombra ligera para profundidad */
+    transition: background 0.3s, transform 0.2s;
+}
+
+.navigation li:hover {
+    background: #1e4a7a; /* Fondo mas solido al pasar el raton */
+}
+
+.navigation li a {
+    color: #e0e8f0;
+    font-weight: 500; /* Un poco mas grueso que lo normal */
+}
+
+.navigation li a:hover {
+    color: #fff; /* Blanco puro para resaltar */
+}
+
+section {
+    margin: 2rem auto; /* Margen vertical y centrado horizontal */
+    max-width: 900px; /* Limita el ancho para que no se estire demasiado */
+}
+
+/*
+Contenedores comunes (todos los .container-*)
+Selector de atributo: todos los elementos cuya class empiece por "container-.". Esto permite que todas
+las secciones (sobremi, experiencia, estudios) compartan estos estilos base sin repetir código.
+*/
+[class^="container-"] {
+    background: rgba(10, 31, 59, 0.85); /* Fondo oscuro semitransparente */
+    border: 1px solid #1e4a7a; /* Borde sutil del mismo tono azul */
+    border-radius: 1.5rem; /* Esquinas redondeadas */
+    padding: 2.5rem; /* Espacio interno */
+    margin: 2rem 0; /* Separacion entre contenedores */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* Sombra mas pronunciada */
+    color: #d0dce8; /* Texto gris azulado */
+    line-height: 1.8; /* Mayor interlineado para legibilidad */
+    font-size: 1.05rem;
+}
+
+/* Todos los titulos h2 dentro de estos contenedores tendran una linea inferior*/
+
+[class^="container-"] h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 3px solid #3a7bb5; /* Linea decorativa azul */
+    padding-bottom: 0.5rem;
+}
+
+[class^="container-"] h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem; /* Separacion superior */
+    color: #b8d4f0; /* Azul mas claro para subtitulos */
+}
+
+[class^="container-"] h4 {
+    font-size: 1.1rem;
+    font-weight: 400; /* Peso normal para que sea menos enfatico */
+    color: #a0c0e0;
+    margin: 0.5rem 0;
+}

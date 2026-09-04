@@ -1,0 +1,17 @@
+/*
+Misma logica que en experiencia.
+*/
+.container-estudios a {
+    display: inline-block;
+    background: #1e4a7a;
+    color: #fff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.container-estudios a:hover {
+    background: #2e6a9a;
+}
