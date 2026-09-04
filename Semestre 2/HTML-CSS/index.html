@@ -1,21 +1,68 @@
 <!DOCTYPE html>
+<!-- Declaracion del tipo de documento, especifica que se trata de un documento HTML5 -->
+<!-- Comentario en html -->
+<!--
+    comentarios multiples
+-->
 <html lang="en">
+<!-- Elemento raiz del documento HTML. El atributo lang="en" indica que el idioma del contenido
+  es inglés. -->
 <head>
+    <!-- Contiene metadatos y enlaces a recursos externos, no se muestra directamente en la pagina -->
     <meta charset="UTF-8">
+    <!-- Declara la codificacion de caracteres del documento como UTF-8, lo que permite usar una amplia
+     variedad de caracteres. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura la ventana grafica para el diseño responsivo.
+     width-device-width establece el ancho de la pagina para que coincida con el ancho del dispositivo
+     initial scale=1.0 establece el nivel de zoom inicial cuando la pagina se carga
+     -->
+     <!-- Agregamos 2 etiquetas meta para el SEO -->
+    <meta name="description" content="Nombre del grupo o alumno, creado por nombre del grupo especializado en [Programacion]">
+    <meta name="keywords" content="portafolio, desarrollador web [programador], proyectos, contacto">
+    
     <title>Portafolio web</title>
+    <!-- Define el titulo del documento, que se muestra en la pestaña del navegador o en los resultados
+     de busqueda. -->
     <link rel="stylesheet" href="./style.css">
+    <!-- Enlace a una hoja de estilos externa.
+     href="./style.css" especifica la ubicacion del archivo CSS -->
 </head>
 <body>
+    <!-- Cuerpo del documento, contiene el contenido visible para los usuarios -->
     <header>
+        <!-- Seccion de cabecera de la pagina, generalmente contiene logotipos, navegacion y titulos -->
         <h1>nombre del alumno</h1>
+        <!-- Encabezado principal de la pagina, tipicamente usado para el titulo o nombre del sitio -->
         <img src="" alt="">
         <nav>
+            <!-- Elemento de navegacion, contiene enlaces a otras partes de la pagina o a otras paginas -->
             <ul class="navigation">
+                <!-- Lista no ordenada, contiene elementos de navegacion
+                 class="navigation" aplica estilos definidos en CSS a esta lista -->
                 <li><a href="#sobremi">Sobre mi</a></li>
+                <!-- Elemento de lista que contiene un enlace
+                 href="#sobremi" apunta a un ancla dentro de la misma pagina con el id="sobremi" -->
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#estudios">Estudios</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <!-- Otro elemento de la lista con un enlace
+                 href="#proyectos" apunta a un ancla dentro de la misma pagina con el id="proyectos" -->
+                 <li><a href="#contacto">Contactame</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="sobremi">
+            <article class="container-sobremi">
+                <h2>
+                    Soy <b>Técnico Universitario en Programación</b>, egresado de la Universidad Tecnológica
+                    Nacional (UTN) - FRSR, Argentina.
+                    Me apasiona programar y desarrollar soluciones de aplicaciones web originales y
+                    personalizadas.
+                </h2>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

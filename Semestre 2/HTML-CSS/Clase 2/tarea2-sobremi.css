@@ -37,16 +37,20 @@ a{
 
 .sobremi {
     display: flex;
-    justify-content: center; /* Esto centra el elemento */
+    justify-content: center;
 }
+
 .container-sobremi {
     display: flex;
-    width: 50%; /* Ancho */
+    flex-direction: column; /* Importante: los elementos en columna, no en fila */
+    width: 50%;
     padding: 2rem;
-    margin-top: 5rem; /* Margen a lo alto */
-    line-height: 2.5rem; /* Espaciado entre los parrafos del texto */
-    font-size: large; /* Tamaño de la fuente */
+    margin-top: 5rem;
+    line-height: 2.5rem;
+    font-size: large;
     color: azure;
+    background-color: rgba(0, 0, 0, 0.6); /* Opcional: para mejorar legibilidad */
+    border-radius: 1rem; /* Opcional: bordes redondeados */
 }
 
 /* Media Queries agrupadas */
