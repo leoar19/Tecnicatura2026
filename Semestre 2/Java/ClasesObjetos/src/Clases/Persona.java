@@ -5,8 +5,8 @@ public class Persona {
     // Recomendado declarar los atributos al principio de una clase, como una
     // buena practica
     // Atributos de la clase (Caracteristicas)
-    String nombre; // Todo esto es una plantilla para poder utilizar la clase
-    String apellido;
+    public String nombre; // Todo esto es una plantilla para poder utilizar la clase
+    public String apellido;
     
     // Metodos de la clase (Acciones)
     /*

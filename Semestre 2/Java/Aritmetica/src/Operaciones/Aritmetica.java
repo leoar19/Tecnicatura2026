@@ -7,6 +7,17 @@ public class Aritmetica { // una clase siempre con mayuscula, PascalCase
     int b;
     // un booleano por default recibe false.
     
+    // El constructor es un metodo especial
+    public Aritmetica(){ // Constructor 1 vacio
+        System.out.println("Se esta ejecutando este constructor numero uno");
+    }
+    // Estamos viendo lo que se llama sobrecarga de constructores
+    public Aritmetica(int a, int b){ // Constructor 2
+        this.a = a;
+        this.b = b;
+        System.out.println("Se esta ejecutando este constructor numero dos");
+    }
+    
     // Metodo
     // No es recomendable crear aqui el metodo main, donde estan los atributos
     public void sumarNumeros() {
