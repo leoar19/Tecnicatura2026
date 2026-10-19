@@ -8,6 +8,7 @@ comentarios multiples lineas
     --body-bg-color: rgb(43,43,70);
     --text-color: white;
     --colorh1-color: rgb(215, 211, 211);
+    --fondo-proyectos: rgb(60, 43, 70); /* Agregado en la clase 5: flexbox */
 }
 /* Aplicando variable creada en el root al body de nuestra web */
 /* Reemplazo el body con el uso de variables css*/
