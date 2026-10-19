@@ -1,0 +1,99 @@
+footer {
+    width: 100%;
+    margin-top: 3rem;
+    background: rgba(10, 31, 59, 0.95); /* azul marino más sólido que las secciones */
+    border-top: 2px solid #1e4a7a;
+    color: #d0dce8;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    color: #a0c0e0;
+    margin: 0;
+}
+
+/* Contenedor de íconos sociales */
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Cada enlace es un "botón" circular */
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+    background: #1e4a7a;
+    transform: translateY(-3px);
+}
+
+/* Tamaño uniforme de los SVG dentro de los enlaces */
+.footer-social svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+/* El SVG de GitHub hereda el color del texto del enlace */
+.footer-social a svg[fill="currentColor"] {
+    color: #e0e8f0;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover svg[fill="currentColor"] {
+    color: #fff;
+}
+
+/* Responsive */
+/* Celular: apilado y centrado */
+@media (max-width: 767px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2rem 1rem;
+        gap: 0.8rem;
+    }
+
+    .footer-info p {
+        font-size: 0.85rem;
+    }
+
+    .footer-social a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-social svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Tablet: sin cambios grandes, solo ajuste de padding */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .footer-container {
+        padding: 1.5rem 1.5rem;
+    }
+}
+
+/* Desktop: layout original en fila */
