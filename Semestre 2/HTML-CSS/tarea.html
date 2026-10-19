@@ -7,14 +7,15 @@
     <meta name="keywords" content="portafolio, desarrollador web [Leonel Araya], proyectos, contacto">
     <title>Portafolio web</title>
     <!-- Primero importo lo global-->
-    <link rel="stylesheet" href="./tarea-style.css">
+    <link rel="stylesheet" href="./CSS-Tarea/tarea-style.css">
     <!-- Ahora importo lo especifico -->
-    <link rel="stylesheet" href="./tarea-sobremi.css">
-    <link rel="stylesheet" href="./tarea-experiencia.css">
-    <link rel="stylesheet" href="./tarea-estudios.css">
-    <link rel="stylesheet" href="./tarea-proyectos.css">
+    <link rel="stylesheet" href="./CSS-Tarea/tarea-sobremi.css">
+    <link rel="stylesheet" href="./CSS-Tarea/tarea-experiencia.css">
+    <link rel="stylesheet" href="./CSS-Tarea/tarea-estudios.css">
+    <link rel="stylesheet" href="./CSS-Tarea/tarea-proyectos.css">
+    <link rel="stylesheet" href="CSS-Tarea/tarea-contacto.css">
     <!-- Responsive siempre al final -->
-    <link rel="stylesheet" href="./tarea-responsive.css">
+    <link rel="stylesheet" href="./CSS-Tarea/tarea-responsive.css">
 </head>
 <body>
     <header>
@@ -103,31 +104,45 @@
         </section>
         <section id="proyectos" class="proyectos">
             <h2>Proyectos</h2>
-            <div class="container-proyectos">
-                <div class="proyecto">
-                    <img src="Assets/ProyectoTrivia.png" alt="Foto del proyecto Trivia">
-                    <h3>Proyecto Trivia</h3>
-                    <p>
-                        Proyecto realizado en PSeInt para la Tecnicatura en Programación. Se trata
-                        de una trivia donde la dificultad de las preguntas varía según la edad
-                        ingresada por el jugador. Además contiene diversos tópicos.
-                    </p>
-                    <a href="#">Ver más</a>
-                    <a href="https://github.com/leoar19/Proyecto-PSeInt" target="_blank"
-                     rel="noopener noreferrer">GitHub</a>
-                    <a href="#">Tecnologías</a>
+            <article class="container-proyectos">
+                <div class="galeria-proyectos">
+                    <div class="proyecto">
+                        <img src="Assets/ProyectoTrivia.png" alt="Foto del proyecto Trivia">
+                        <h3>Proyecto Trivia</h3>
+                        <p>
+                            Proyecto realizado en PSeInt para la Tecnicatura en Programación. Se 
+                            trata de una trivia donde la dificultad de las preguntas varía según
+                            la edad ingresada por el jugador. Además contiene diversos tópicos.
+                        </p>
+                        <a href="#">Ver más</a>
+                        <a href="https://github.com/leoar19/Proyecto-PSeInt" target="_blank"
+                         rel="noopener noreferrer">GitHub</a>
+                        <a href="#">Tecnologías</a>
+                    </div>
+                    <div class="proyecto">
+                        <img src="Assets/ProyectoEjemploError.png" alt="Foto del proyecto ejemplo">
+                        <h3>Proyecto Ejemplo</h3>
+                        <p>
+                            Descripcion breve del proyecto ejemplo.
+                        </p>
+                        <a href="#">Ver mas</a>
+                        <a href="#">GitHub</a>
+                        <a href="#">Tecnologias</a>
+                    </div>
                 </div>
-                <div class="proyecto">
-                    <img src="Assets/ProyectoEjemploError.png" alt="Foto del proyecto ejemplo">
-                    <h3>Proyecto Ejemplo</h3>
-                    <p>
-                        Descripcion breve del proyecto ejemplo.
-                    </p>
-                    <a href="#">Ver mas</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Tecnologias</a>
-                </div>
-            </div>
+            </article>
+        </section>
+        <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <!-- Google Forms Embed Code -->
+         <div class="formulario-contacto">
+            <iframe 
+                src="https://docs.google.com/forms/d/e/1FAIpQLSc5CatbBKmHgEYoYb9UtdP3Jx8uvhQ6OA2SKJQGZVRgVy3kpQ/viewform?embedded=true" width="640" height="1092" frameborder="0" marginheight="0" marginwidth="0"
+                title="Formulario de contacto de Google Forms"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+         </div>
         </section>
     </main>
 </body>

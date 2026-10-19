@@ -1,0 +1,77 @@
+.contacto {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    background: rgba(10, 31, 59, 0.6);
+    border-radius: 1.5rem;
+}
+
+.contacto > h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #3a7bb5;
+    padding-bottom: 0.5rem;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor del formulario */
+.formulario-contacto {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(30, 74, 122, 0.3);
+    border: 1px solid #1e4a7a;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* El iframe de Google Forms */
+.formulario-contacto iframe {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    min-height: 600px; /* Altura mínima razonable para ver el form */
+    height: 100%;
+    border: none; /* Quita el borde por defecto del iframe */
+    border-radius: 0.6rem;
+    background: #fff; /* Fondo blanco: Google Forms se ve blanco */
+}
+
+/* Responsive */
+/* Celular */
+@media (max-width: 767px) {
+    .contacto > h2 {
+        font-size: 1.6rem;
+    }
+
+    .formulario-contacto {
+        padding: 0.8rem;
+        border-radius: 0.8rem;
+    }
+
+    .formulario-contacto iframe {
+        min-height: 550px; /* Los forms en móvil suelen necesitar bastante alto */
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contacto > h2 {
+        font-size: 1.8rem;
+    }
+
+    .formulario-contacto iframe {
+        min-height: 620px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .formulario-contacto iframe {
+        min-height: 650px;
+    }
+}

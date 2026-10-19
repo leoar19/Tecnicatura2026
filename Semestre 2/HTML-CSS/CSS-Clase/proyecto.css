@@ -2,6 +2,7 @@
     width: 80%;
     padding: 1rem;
     background: var(--fondo-proyectos);
+    margin: 0 auto;
 }
 
 /* Este es el contenedor general que engloba a los proyectos */
@@ -22,6 +23,7 @@
     una fila */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Imagen del proyecto */

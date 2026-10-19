@@ -24,8 +24,9 @@
     <title>Portafolio web</title>
     <!-- Define el titulo del documento, que se muestra en la pestaña del navegador o en los resultados
      de busqueda. -->
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./proyecto.css">
+    <link rel="stylesheet" href="./CSS-Clase/style.css">
+    <link rel="stylesheet" href="./CSS-Clase/proyecto.css">
+    <link rel="stylesheet" href="./CSS-Clase/contacto.css">
     <!-- Enlace a una hoja de estilos externa.
      href="./style.css" especifica la ubicacion del archivo CSS -->
 </head>
@@ -54,7 +55,7 @@
         </nav>
     </header>
     <main>
-        <section class="sobremi">
+        <section id="sobremi" class="sobremi">
             <article class="container-sobremi">
                 <img class="img-perfil" src="Assets/ejemplo.jpg" alt="fotografia de ejemplo" width="200" height="200">
                 <h2>
@@ -83,10 +84,11 @@
             </article>
         </section>
         <section id="proyectos" class="proyectos">
-            <h2>Proyectos</h2>
+            <article class="container-proyectos">
+                <h2>Proyectos</h2>
             <div class="galeria-proyectos">
                 <div class="proyecto">
-                    <img src="" alt="Foto del proyecto 1">
+                    <img src="./Assets/ProyectoEjemploError.png" alt="Foto del proyecto 1">
                     <h3>Proyecto 1</h3>
                     <p>
                         Descripcion breve del proyecto 1.
@@ -96,7 +98,7 @@
                     <a href="#">Tecnologias</a>
                 </div>
                 <div class="proyecto">
-                    <img src="" alt="Foto del proyecto 2">
+                    <img src="./Assets/ProyectoEjemploError.png" alt="Foto del proyecto 2">
                     <h3>Proyecto 2</h3>
                     <p>
                         Descripcion breve del proyecto 2.
@@ -106,7 +108,7 @@
                     <a href="#">Tecnologias</a>
                 </div>
                 <div class="proyecto">
-                    <img src="" alt="Foto del proyecto 3">
+                    <img src="./Assets/ProyectoEjemploError.png" alt="Foto del proyecto 3">
                     <h3>Proyecto 3</h3>
                     <p>
                         Descripcion breve del proyecto 3.
@@ -116,7 +118,45 @@
                     <a href="#">Tecnologias</a>
                 </div>
                 <!--Aqui se pueden agregar mas proyectos-->
+                <div class="proyecto">
+                    <img src="./Assets/ProyectoEjemploError.png" alt="Foto del proyecto 4">
+                    <h3>Proyecto 4</h3>
+                    <p>
+                        Descripcion breve del proyecto 4.
+                    </p>
+                    <a href="#">Ver mas</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Tecnologias</a>
+                </div>
+                <div class="proyecto">
+                    <img src="./Assets/ProyectoEjemploError.png" alt="Foto del proyecto 5">
+                    <h3>Proyecto 5</h3>
+                    <p>
+                        Descripcion breve del proyecto 5.
+                    </p>
+                    <a href="#">Ver mas</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Tecnologias</a>
+                </div>
+                <div class="proyecto">
+                    <img src="./Assets/ProyectoEjemploError.png" alt="Foto del proyecto 6">
+                    <h3>Proyecto 6</h3>
+                    <p>
+                        Descripcion breve del proyecto 6.
+                    </p>
+                    <a href="#">Ver mas</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Tecnologias</a>
+                </div>
             </div>
+            </article>
+        </section>
+        <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <!-- Google Forms Embed Code -->
+         <div class="formulario-contacto">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc5CatbBKmHgEYoYb9UtdP3Jx8uvhQ6OA2SKJQGZVRgVy3kpQ/viewform?embedded=true" width="640" height="1092" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+         </div>
         </section>
     </main>
 </body>

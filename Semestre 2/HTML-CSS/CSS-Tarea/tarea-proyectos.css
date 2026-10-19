@@ -22,7 +22,7 @@
 }
 
 /* Contenedor general (flexbox para las tarjetas) */
-.container-proyectos {
+.galeria-proyectos {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
